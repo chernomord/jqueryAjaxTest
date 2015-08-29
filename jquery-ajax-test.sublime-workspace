@@ -1,0 +1,863 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ba",
+				"background-repeat"
+			],
+			[
+				"back",
+				"background-position"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"i",
+				"inline-block"
+			],
+			[
+				"co",
+				"content"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"bak",
+				"background-size"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"so",
+				"solid"
+			],
+			[
+				"border-",
+				"border-box"
+			],
+			[
+				"backg",
+				"background-image"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"cl",
+				"clear"
+			],
+			[
+				"f",
+				"font-size"
+			],
+			[
+				"th",
+				"thead	Tag"
+			],
+			[
+				"t",
+				"thead	Tag"
+			],
+			[
+				"bacl",
+				"background-color"
+			],
+			[
+				"s",
+				"src"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"bo",
+				"box-shadow"
+			],
+			[
+				"min-",
+				"min-width"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"paddin",
+				"padding-top"
+			],
+			[
+				"scroll",
+				"scrollTop"
+			],
+			[
+				"las",
+				"last-of-type"
+			],
+			[
+				"bord",
+				"border"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"al",
+				"text-align"
+			],
+			[
+				"ow",
+				"overflow"
+			],
+			[
+				"a",
+				"text-align"
+			],
+			[
+				"backgrou",
+				"background-image"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"o",
+				"overflow"
+			],
+			[
+				"paddi",
+				"padding"
+			],
+			[
+				"p",
+				"Pmove"
+			],
+			[
+				"if",
+				"ife	if … else"
+			],
+			[
+				"pP",
+				"pPglobal"
+			],
+			[
+				"xP",
+				"xPglobal"
+			],
+			[
+				"data",
+				"data-waypoint"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"backgr",
+				"background-image"
+			],
+			[
+				"se",
+				"services"
+			],
+			[
+				"head",
+				"header	Tag"
+			],
+			[
+				"r",
+				"r"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"h",
+				"h3	Tag"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"width",
+				"max-width"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/index.jade",
+			"settings":
+			{
+				"buffer_size": 179,
+				"line_ending": "Windows",
+				"name": "doctype html"
+			}
+		},
+		{
+			"file": "/C/!-Slava/GitHub/MockupWebView/less/app.less",
+			"settings":
+			{
+				"buffer_size": 2941,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 1458,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/app.js",
+			"settings":
+			{
+				"buffer_size": 76,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"pi",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Advanced Install Package"
+			]
+		],
+		"width": 472.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/!-Slava/GitHub/jqueryAjaxTest/src/js/zapp.js",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/js/all.js",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/gulpfile.js",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/src/less/normalize.less",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/css/styles.css",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/src/less/styles.less",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/index.html",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/gulp.js",
+		"/C/!-Slava/!-Projects/!-inProcess/emvio-webprototype/WebCode/css/bootstrap.css",
+		"/C/!-Slava/!-Projects/!-inProcess/emvio-webprototype/WebCode/css/darta-theme.css",
+		"/C/!-Slava/!-Projects/!-inProcess/emvio-webprototype/WebCode/login.html",
+		"/C/!-Slava/!-Projects/!-inProcess/emvio-webprototype/WebCode/template.html",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/package.json",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/csskomarov/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/csskomarov/works/tchka1c-01/index.html",
+		"/C/Users/Slava/Documents/chernomord.github.io/_config.yml",
+		"/C/!-Slava/!-Projects/!-inProcess/OrlovYar/Landing-tochka+1c/motherLanding/1C_files/md5.js",
+		"/C/!-Slava/!-Projects/!-inProcess/OrlovYar/Landing-tochka+1c/motherLanding/1C_files/watch.js",
+		"/C/!-Slava/!-Projects/!-inProcess/OrlovYar/Landing-tochka+1c/motherLanding/1C_files/script-map.js",
+		"/C/!-Slava/!-Projects/!-inProcess/OrlovYar/Landing-tochka+1c/motherLanding/1C_files/script.js",
+		"/C/!-Slava/!-Projects/!-inProcess/OrlovYar/Landing/script.js",
+		"/C/Users/Slava/Documents/chernomord.github.io/about.md",
+		"/C/Users/Slava/Documents/chernomord.github.io/index.html",
+		"/C/Users/Slava/Documents/chernomord.github.io/feed.xml",
+		"/C/!-Slava/!-Projects/!-inProcess/emvio-webprototype/WebCode/i/d_src-chk-g-u.svg",
+		"/C/Users/Slava/bower_components/bootstrap/dist/css/bootstrap.css.map",
+		"/C/Users/Slava/bower_components/angular-loader/angular-loader.js",
+		"/C/Users/Slava/bower_components/angular-loader/angular-loader.min.js",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/css/skeleton.css",
+		"/C/!-Slava/!-Projects/!-inProcess/!-miringa/agencyTmplt/html/i/sectionsBorders.svg",
+		"/C/!-Slava/!-Projects/!-inProcess/!-miringa/agencyTmplt/sourcegfx/sectionsBorders.svg",
+		"/C/!-Slava/!-Projects/!-inProcess/!-miringa/agencyTmplt/sourcegfx/AMIfv94mqRmDlWdalnwknrg_cUGI-z1CBM4HNBhc_q8vjJDF3ZSNmjUMZvvYmgTowtXVhihbzzTs_O2Rsz8RsGzPRSaPwZSbfy3fX-K_GhB02r6pc34-NDCdoUubnXuMTa6JuelWX7rdn15_9xjUp2jVihw1M40DCRXookJmX1MC0eISSqLRduI.svg",
+		"/C/!-Slava/!-Projects/!-inProcess/!-miringa/agencyTmplt/sourcegfx/sectionsBorders copy.svg",
+		"/C/!-Slava/!-Projects/!-inProcess/!-miringa/agencyTmplt/html/js/ie10-viewport-bug-workaround.js",
+		"/C/!-Slava/!-Projects/!-inProcess/Lemeshevskiy/skidki-popup.code/popup.html",
+		"/C/!-Slava/!-Projects/!-inProcess/!-miringa/agencyTmplt/html/css/bootstrap.min.css",
+		"/C/!-Slava/!-Projects/!-inProcess/Lemeshevskiy/skidki-popup.code/css/modal.css",
+		"/C/Users/Slava/bower_components/bootstrap/dist/css/bootstrap-theme.css",
+		"/C/Users/Slava/bower_components/jquery/dist/jquery.js",
+		"/C/!-Slava/!-Projects/!-inProcess/rusin/1-webcode/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/!-miringa/agencyTmplt/html/css/bootstrap.css.map",
+		"/C/Users/Slava/bower_components/bootstrap/Gruntfile.js",
+		"/C/Users/Slava/bower_components/bootstrap/package.json",
+		"/C/!-Slava/!-Projects/!-inProcess/Lemeshevskiy/skidki-popup.code/js/jquery.the-modal.js",
+		"/C/Users/Slava/bower_components/bootstrap/less/theme.less",
+		"/C/Users/Slava/bower_components/bootstrap/less/.csscomb.json",
+		"/C/Users/Slava/bower_components/bootstrap/grunt/sauce_browsers.yml",
+		"/C/Users/Slava/bower_components/bootstrap/grunt/bs-lessdoc-parser.js",
+		"/C/Users/Slava/bower_components/bootstrap/grunt/bs-raw-files-generator.js",
+		"/C/Users/Slava/bower_components/bootstrap/grunt/configBridge.json",
+		"/C/Users/Slava/bower_components/bootstrap/dist/css/bootstrap.css",
+		"/C/Users/Slava/bower_components/bootstrap/less/mixins/grid.less",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/js/scripts.js",
+		"/C/!-Slava/!-Projects/!-inProcess/rusin/1-webcode/css/skeleton.css",
+		"/C/!-Slava/!-Projects/!-inProcess/Lemeshevskiy/skidki-popup.code/css/styles.css",
+		"/C/!-Slava/!-Projects/!-inProcess/Lemeshevskiy/skidki-popup.sources/styles.css",
+		"/C/!-Slava/!-Projects/!-inProcess/Lemeshevskiy/skidki-popup.code/img/discCloseBtn.svg",
+		"/C/!-Slava/!-Projects/!-inProcess/Lemeshevskiy/skidki-popup.sources/the-modal-master/demo/demo-modals.css",
+		"/C/!-Slava/!-Projects/!-inProcess/Lemeshevskiy/skidki-popup.sources/the-modal-master/the-modal.css",
+		"/C/!-Slava/!-Projects/!-inProcess/Lemeshevskiy/skidki-popup.sources/the-modal-master/demo/demo.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/darta/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/darta/jpg-pages/conc1_01.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/darta/jpg-pages/conc2_01.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/darta/jpg-pages/conc1_02.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/darta/jpg-pages/conc2_02.html",
+		"/C/Dropbox/ELANCE-SkyBow/Logotypes/white-3logos_accelerators.svg",
+		"/C/Dropbox/ELANCE-SkyBow/Logotypes/white-3logos_network.svg",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/ams/jpg-pages/AS2.html",
+		"/C/Dropbox/ELANCE-SkyBow/Logotypes/white-3logos_studio.svg",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/lola911/index.html",
+		"/C/Dropbox/ELANCE-SkyBow/Logotypes/3logos_accelerators.svg",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/lola911/jpg-pages/lola911-01.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/aplana/jpg-pages/Aplana_1.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/aplana/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/constanta/jpg-pages/ConstantG_B_9a.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/constanta/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/Inteduca - Pepsico/interface/svg-icons/svg-icons-01.svg",
+		"/C/!-Slava/!-Projects/!-inProcess/rusin/003/form.html",
+		"/C/Users/Slava/Desktop/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/constanta/jpg-pages/ConstantG_B_2.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/Constanta/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/constanta/jpg-pages/constanta-alt.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/promeng-eng/index.html",
+		"/C/Dropbox/Tceh-landing-presBattle/PresBatl-webCode/css/skeleton.css",
+		"/C/Dropbox/Tceh-landing-presBattle/PresBatl-webCode/js/scripts.js",
+		"/C/Dropbox/Tceh-landing-presBattle/PresBatl-webCode/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/promeng-eng/jpg.pages/haimer.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/promeng-eng/jpg.pages/news.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/rsr-eng/jpg.pages/landing.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/html-pres/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/html-pres/jpg-pages/ConstantG_33.html",
+		"/C/Dropbox/Tceh-landing-renaiscance/webCode/images/keepcalm.svg",
+		"/C/Dropbox/Tceh-landing-renaiscance/webCode/images/hacknroll.svg",
+		"/C/Dropbox/Tceh-landing-renaiscance/webCode/css/skeleton.css",
+		"/C/Dropbox/Tceh-landing-renaiscance/webCode/index.html",
+		"/C/Dropbox/Tceh-landing-renaiscance/webCode/js/scripts.js",
+		"/C/Dropbox/Tceh-landing-renaiscance/webCode/js/jquery.simplr.smoothscroll.js",
+		"/C/Dropbox/Tceh-landing-renaiscance/webCode/js/skrollr.js",
+		"/C/Dropbox/Tceh-landing-renaiscance/webCode/font-awesome-4.3.0/css/font-awesome.css",
+		"/C/Dropbox/Tceh-landing-renaiscance/Design/keepcalm2.svg",
+		"/C/Dropbox/Tceh-landing-renaiscance/Design/keepcalm.svg",
+		"/C/Dropbox/Tceh-landing-renaiscance/Design/keep-calm-and-carry-on [Converted] copy.svg",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/prom-eng/web/css/styles.css",
+		"/C/Dropbox/Tceh-landing-renaiscance/webCode/index2.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/test.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/tceh/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/tceh/jpg.pages/landing-renesc-2.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/tceh/jpg.pages/landing-renesc.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/candyface/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/onlime/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/prom-eng/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/js/jquery/jquery.min.js",
+		"/C/!-Slava/!-Projects/!-inProcess/Promengineering/02.design/web/css/styles.css",
+		"/C/!-Slava/!-Projects/!-inProcess/Promengineering/02.design/web/js/scripts.js",
+		"/C/!-Slava/!-Projects/!-inProcess/Promengineering/02.design/web/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/js/waypoints/jquery.waypoints.min.js",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/js/jquery.waypoints.js",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/prom-eng/web/index.html",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/prom-eng/web/js/scripts.js",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/font-awesome-4.3.0/css/font-awesome.css",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/font-awesome-4.3.0/css/font-awesome.min.css",
+		"/C/!-Slava/!-Projects/!-inProcess/Promengineering/02.design/web/about.html",
+		"/C/!-Slava/!-Projects/!-inProcess/Promengineering/02.design/web/sab.html",
+		"/C/!-Slava/!-Projects/!-inProcess/Promengineering/02.design/web/haimer.html",
+		"/C/Users/Slava/Documents/Euro Truck Simulator 2/profiles/536C617661/config.cfg",
+		"/C/Users/Slava/Documents/Euro Truck Simulator 2/profiles/536C617661/controls.sii",
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/candyface/jpg.pages/project02.html"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"head",
+			"a ",
+			"a",
+			"Продолжительность\n<a href=\"\">Активность (%) </a>",
+			"<a href=\"\">Активность (%) </a>",
+			".form-control",
+			"promo_list",
+			"Down",
+			"triangle-bottom",
+			".glyphicon-triangle-bottom",
+			"glyphicon-triangle-bottom",
+			"glyphicon",
+			"glyphicon glyphicon-triangle-bottom",
+			"icon",
+			"nobr",
+			"table-hover",
+			"nav ",
+			".form-horizontal",
+			".form ",
+			".breadcrumb",
+			"bread",
+			".breadcrumb",
+			"breadcrumb",
+			"form-control",
+			"input",
+			"h1",
+			"btn ",
+			".nav",
+			".nav li",
+			".nav > li",
+			".nav>li>a",
+			".nav > li > a",
+			".navbar-nav > li > a",
+			".navbar-nav > a",
+			".navbar-nav>li>a",
+			"font-family",
+			".nav ",
+			".nav",
+			"nav",
+			"navbar",
+			"container",
+			"row",
+			"font-family",
+			"carousel-fade",
+			"nav",
+			"navbar-wrapper",
+			"panel-info > .panel-heading",
+			"font",
+			"phone",
+			"section",
+			"span",
+			"label",
+			"p",
+			"div",
+			"row",
+			"12",
+			"p",
+			"h2",
+			"h1",
+			"phonebook",
+			"blue",
+			"red",
+			"button",
+			";\n",
+			".a",
+			"h2",
+			"h1",
+			"h2",
+			"place",
+			"Пуск",
+			"2",
+			"1",
+			"h3",
+			"Код подтверждения",
+			"Код",
+			"h1",
+			"Login",
+			"h4",
+			"keepcalm",
+			"price__text",
+			"title__regbutton",
+			"h3",
+			"title_button--date",
+			"#f7bf15;",
+			"p",
+			"h3",
+			"p",
+			"instructor",
+			"strong",
+			"r",
+			"strong",
+			"h2",
+			"strong",
+			"h3",
+			"h2",
+			"p",
+			"title_button--date",
+			"h2",
+			"/images",
+			"images/",
+			"#",
+			"logo--threecol",
+			"#",
+			"logo--threecol",
+			"column--fancy",
+			"column",
+			"column--fancy",
+			"p",
+			"padding",
+			"opacity",
+			"parallax",
+			"li",
+			"persona",
+			"hack",
+			"h1",
+			":00",
+			":",
+			"00",
+			"11",
+			"strong",
+			"посреди",
+			"h1",
+			"посреди",
+			"h3",
+			"span",
+			"h3",
+			"strong",
+			"logo--threecol"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"#ffe04f;",
+			"<sup>00</sup>",
+			"",
+			"среди",
+			"&mdash;",
+			" &ndash;",
+			"&ndash;",
+			"ScrlStatic",
+			"",
+			"&ndash;",
+			"</p><p>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/index.jade",
+					"settings":
+					{
+						"buffer_size": 179,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								111,
+								111
+							]
+						],
+						"settings":
+						{
+							"auto_name": "doctype html",
+							"incomplete_sync": null,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/!-Slava/GitHub/MockupWebView/less/app.less",
+					"settings":
+					{
+						"buffer_size": 2941,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "gulpfile.js",
+					"settings":
+					{
+						"buffer_size": 1458,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								964,
+								970
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/js/app.js",
+					"settings":
+					{
+						"buffer_size": 76,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								76,
+								76
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.540418118467,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 25.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"index.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 227.0,
+	"status_bar_visible": true
+}

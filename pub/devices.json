@@ -1,0 +1,32 @@
+[
+	{
+		"id" :1,
+		"type" : "media_player" ,
+		"properties" : 
+			{
+				"name" : "Name 1",
+				"serial" : "Serial 1",
+				"model" : "Model 1",
+			}
+	},
+	{
+		"id" :2,
+		"type" : "hub" ,
+		"properties" : 
+			{
+				"name" : "Name 2",
+				"serial" : "Serial 2",
+				"model" : "Model 2",
+			}
+	},
+	{
+		"id" :3,
+		"type" : "media_server" ,
+		"properties" : 
+			{
+				"name" : "Name 3",
+				"serial" : "Serial 3",
+				"model" : "Model 3",
+			}
+	}
+]
