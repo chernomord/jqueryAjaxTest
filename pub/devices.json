@@ -6,27 +6,147 @@
 			{
 				"name" : "Name 1",
 				"serial" : "Serial 1",
-				"model" : "Model 1",
+				"model" : "Model 1"
 			}
 	},
 	{
 		"id" :2,
-		"type" : "hub" ,
+		"type" : "media_player" ,
+		"properties" : 
+			{
+				"name" : "Name 1",
+				"serial" : "Serial 1",
+				"model" : "Model 1"
+			}
+	},	
+	{
+		"id" :3,
+		"type" : "media_player" ,
+		"properties" : 
+			{
+				"name" : "Name 1",
+				"serial" : "Serial 1",
+				"model" : "Model 1"
+			}
+	},	
+	{
+		"id" :4,
+		"type" : "media_player" ,
+		"properties" : 
+			{
+				"name" : "Name 1",
+				"serial" : "Serial 1",
+				"model" : "Model 1"
+			}
+	},	
+	{
+		"id" :5,
+		"type" : "media_player" ,
+		"properties" : 
+			{
+				"name" : "Name 1",
+				"serial" : "Serial 1",
+				"model" : "Model 1"
+			}
+	},
+	{
+		"id" :6,
+		"type" : "media_server" ,
 		"properties" : 
 			{
 				"name" : "Name 2",
 				"serial" : "Serial 2",
-				"model" : "Model 2",
+				"model" : "Model 2"
 			}
 	},
 	{
-		"id" :3,
+		"id" :7,
 		"type" : "media_server" ,
+		"properties" : 
+			{
+				"name" : "Name 2",
+				"serial" : "Serial 2",
+				"model" : "Model 2"
+			}
+	},
+	{
+		"id" :8,
+		"type" : "media_server" ,
+		"properties" : 
+			{
+				"name" : "Name 2",
+				"serial" : "Serial 2",
+				"model" : "Model 2"
+			}
+	},
+	{
+		"id" :9,
+		"type" : "media_server" ,
+		"properties" : 
+			{
+				"name" : "Name 2",
+				"serial" : "Serial 2",
+				"model" : "Model 2"
+			}
+	},
+	{
+		"id" :10,
+		"type" : "media_server" ,
+		"properties" : 
+			{
+				"name" : "Name 2",
+				"serial" : "Serial 2",
+				"model" : "Model 2"
+			}
+	},
+	{
+		"id" :11,
+		"type" : "media_display" ,
 		"properties" : 
 			{
 				"name" : "Name 3",
 				"serial" : "Serial 3",
-				"model" : "Model 3",
+				"model" : "Model 3"
+			}
+	},
+	{
+		"id" :12,
+		"type" : "media_display" ,
+		"properties" : 
+			{
+				"name" : "Name 3",
+				"serial" : "Serial 3",
+				"model" : "Model 3"
+			}
+	},
+	{
+		"id" :13,
+		"type" : "media_display" ,
+		"properties" : 
+			{
+				"name" : "Name 3",
+				"serial" : "Serial 3",
+				"model" : "Model 3"
+			}
+	},
+	{
+		"id" :14,
+		"type" : "media_display" ,
+		"properties" : 
+			{
+				"name" : "Name 3",
+				"serial" : "Serial 3",
+				"model" : "Model 3"
+			}
+	},
+	{
+		"id" :15,
+		"type" : "media_display" ,
+		"properties" : 
+			{
+				"name" : "Name 3",
+				"serial" : "Serial 3",
+				"model" : "Model 3"
 			}
 	}
 ]

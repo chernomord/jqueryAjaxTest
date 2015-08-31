@@ -10,5 +10,13 @@ head
 	link(href="css/styles.css",rel="stylesheet")
 
 	body
-		h1 Test header
-		p test paragraph
+		section(class="container")
+			h1 Test header
+			p(id="test") test paragraph
+			
+		section(class="container")
+			div(class="col editor") editor
+			div(class="col table") workplace
+			div(class="col elements__box") collection
+				p(id="loading", style="display:hidden") json loading...
+		
