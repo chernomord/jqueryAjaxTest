@@ -54,6 +54,7 @@ function load(){
 				$('.element__del').click( function() {
 					$(this).parent().remove();
 				});
+				// $(.)
 				
 	    	}
 	    });
