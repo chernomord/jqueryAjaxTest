@@ -1,10 +1,7 @@
 var devicesConf = {
 	url: "devices.json", type: "GET", dataType : "json",
     success: function( json ) {
-        // $( "<h1>" ).text( json[1].id ).appendTo( "body" );
-        // $( "<div class=\"content\">").html( json[1].type ).appendTo( "body" );
-        // $devices = json;
-        // console.log( json.html );
+    	// debug
         return json;
     },
     error: function( xhr, status, errorThrown ) {
@@ -22,25 +19,27 @@ function getDevices(config){
     $.ajax( config )
     .done(function(devices) {
         d.resolve(devices);
-        // console.log(devices);
     })
     .fail(d.reject); 
     return d.promise();
 };
 
 
-
-//  ui populating
+// Main module
+// Retrieving data and Application loading
 
 function load(){
-    console.log( "populating ..." );
+    console.log( "populating ..." ); // debug
     var loadingData = getDevices(devicesConf).done(function(devices){
     	$devices = devices;
 
+    	// 
+    	// droppable area interaction and data binding setting
+    	// 
 		$('.table').droppable({
 			// accept: function (event, ui) {
 			// 	if ($(this))
-
+			tolerance: 'fit',
 			// },
 	    	drop: function( event, ui ) {
 				// Hold instance of element
@@ -55,29 +54,27 @@ function load(){
 					$(this).parent().remove();
 				});
 				// $(.)
-				
 	    	}
 	    });
-		
 
+		var types = SortIdsByTypes($devices);
 
-
-		var types = getTypes($devices);
+		// rendering palette types and getting data
 
 		renderElements($devices, types);
 
 	});
 
     $.when(loadingData)
-     .done(console.log( "populating : done"));
+     .done(console.log( "populating : done")); // debug
 };
 
 
 
 
-
-// getting item type names array
-function getTypes(dataArray) {
+// data mining module for unpredictable number of types of objects
+// getting array = [type_Name,[type_Ids]]
+function SortIdsByTypes(dataArray) {
 
 	function uniq(a) {
 	    var seen = {};
@@ -89,28 +86,51 @@ function getTypes(dataArray) {
 			return n.type;
 		});
 
-	return uniq(types);
+	var typesIds = dataArray.map(function(n, idx) {
+			return [n.type, n.id ];
+		});
+
+	var uniqueTypes = uniq(types);
+
+	var IdsCollection = [];
+
+	for ( t=0; t < uniqueTypes.length; t++ ) {
+		IdsCollection[t] = [];
+		var a = uniqueTypes[t];
+		IdsCollection[t][0] = uniqueTypes[t];
+		IdsCollection[t][1] = [];
+		for ( i=0; i < typesIds.length; i++) {
+			if ( typesIds[i][0] == uniqueTypes[t] ) {
+				IdsCollection[t][1].push(typesIds[i][1]);
+			};
+		};
+	};
+
+	return IdsCollection;
 };
 
+// 
 
-// populating devices palette
-function renderElements(dataArray, objectTypes) {
 
-	for ( i = 0; i < objectTypes.length; i++ ) {
+// Populating devices palette
+function renderElements(dataArray, IdsCollection) {
+
+	// loop for number of objects types
+	for ( i = 0; i < IdsCollection.length; i++ ) {
 
 		var conf = function (item, idx) {
-			 if ( item.type == objectTypes[i] ) { return true };
+			 if ( item.type == IdsCollection[i][0] ) { return true };
 		};
 
 		var filtered = dataArray.filter(conf);
 	    $("div.elements__box")
 	    .append(
-	    	'<div class="element " id="' + objectTypes[i] + '">'
-	    	+ objectTypes[i].replace('_', ' ') + 
+	    	'<div class="element " id="' + IdsCollection[i][0] + '">'
+	    	+ IdsCollection[i][0].replace(/_/g, ' ') + 
 	    	'<div class="element__counter">' + filtered.length + '</div>'
 	    	+ '</div>'
 	    );
-	    $('.element#' + objectTypes[i])
+	    $('.element#' + IdsCollection[i][0])
 	    .data(filtered)
 	    .draggable({ 
 	    	helper : "clone",
