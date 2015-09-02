@@ -4,20 +4,76 @@
 		"selected_items":
 		[
 			[
-				"ba",
-				"background-repeat"
+				"padd",
+				"padding-top"
 			],
 			[
-				"back",
-				"background-position"
+				"te",
+				"text-align"
 			],
 			[
-				"text",
-				"text-decoration"
+				"at",
+				"attr	.attr() - single"
+			],
+			[
+				"att",
+				"attr	.attr() - single"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"rem",
+				"removeClass	.removeClass()"
+			],
+			[
+				"ha",
+				"hasClass	.hasClass()"
+			],
+			[
+				"in",
+				"inarray	$.inArray()"
+			],
+			[
+				"va",
+				"value	AngularJS"
+			],
+			[
+				"ali",
+				"vertical-align"
 			],
 			[
 				"margin",
-				"margin-right"
+				"margin"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"fade",
+				"fadeOut	.fadeOut()"
+			],
+			[
+				"ba",
+				"background-repeat"
 			],
 			[
 				"ma",
@@ -34,10 +90,6 @@
 			[
 				"c",
 				"color"
-			],
-			[
-				"padd",
-				"padding"
 			],
 			[
 				"fo",
@@ -76,10 +128,6 @@
 				"text-decoration"
 			],
 			[
-				"te",
-				"text-align"
-			],
-			[
 				"padding",
 				"padding-bottom"
 			],
@@ -90,10 +138,6 @@
 			[
 				"margin-",
 				"margin-bottom"
-			],
-			[
-				"font",
-				"font-weight"
 			],
 			[
 				"fon",
@@ -276,10 +320,6 @@
 				"h3	Tag"
 			],
 			[
-				"in",
-				"inline-block"
-			],
-			[
 				"width",
 				"max-width"
 			]
@@ -291,24 +331,25 @@
 			"file": "src/index.jade",
 			"settings":
 			{
-				"buffer_size": 179,
+				"buffer_size": 653,
 				"line_ending": "Windows",
 				"name": "doctype html"
 			}
 		},
 		{
-			"file": "/C/!-Slava/GitHub/MockupWebView/less/app.less",
+			"file": "pub/devices.json",
 			"settings":
 			{
-				"buffer_size": 2941,
-				"line_ending": "Windows"
+				"buffer_size": 2390,
+				"line_ending": "Windows",
+				"name": "["
 			}
 		},
 		{
 			"file": "gulpfile.js",
 			"settings":
 			{
-				"buffer_size": 1458,
+				"buffer_size": 2210,
 				"line_ending": "Windows"
 			}
 		},
@@ -316,7 +357,15 @@
 			"file": "src/js/app.js",
 			"settings":
 			{
-				"buffer_size": 76,
+				"buffer_size": 6311,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/less/styles.less",
+			"settings":
+			{
+				"buffer_size": 1805,
 				"line_ending": "Windows"
 			}
 		}
@@ -353,19 +402,32 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Слава/AppData/Roaming/Skype/My Skype Received Files/data.xlsx",
+		"/C/!-Slava/GitHub/MockupWebView/distr/index.html",
+		"/C/!-Slava/GitHub/MockupWebView/distr/mockups.json",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/gulpfile.js",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/bower_components/jquery-ui/package.json",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/bower_components/jquery-ui/component.json",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/bower_components/jquery-ui/composer.json",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/gulp-def.bat",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/js/app.js",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/start-web-server.bat",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/web-server.js",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/js/app.min.js",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/package.json",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/index.html",
+		"/C/!-Slava/GitHub/MockupWebView/less/app.less",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/js/all-vendor.js",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/src/js/zapp.js",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/js/all.js",
-		"/C/!-Slava/GitHub/jqueryAjaxTest/gulpfile.js",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/src/less/normalize.less",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/css/styles.css",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/src/less/styles.less",
-		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/index.html",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/gulp.js",
 		"/C/!-Slava/!-Projects/!-inProcess/emvio-webprototype/WebCode/css/bootstrap.css",
 		"/C/!-Slava/!-Projects/!-inProcess/emvio-webprototype/WebCode/css/darta-theme.css",
 		"/C/!-Slava/!-Projects/!-inProcess/emvio-webprototype/WebCode/login.html",
 		"/C/!-Slava/!-Projects/!-inProcess/emvio-webprototype/WebCode/template.html",
-		"/C/!-Slava/GitHub/jqueryAjaxTest/package.json",
 		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/csskomarov/index.html",
 		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/csskomarov/works/tchka1c-01/index.html",
 		"/C/Users/Slava/Documents/chernomord.github.io/_config.yml",
@@ -467,20 +529,7 @@
 		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/prom-eng/index.html",
 		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/js/jquery/jquery.min.js",
 		"/C/!-Slava/!-Projects/!-inProcess/Promengineering/02.design/web/css/styles.css",
-		"/C/!-Slava/!-Projects/!-inProcess/Promengineering/02.design/web/js/scripts.js",
-		"/C/!-Slava/!-Projects/!-inProcess/Promengineering/02.design/web/index.html",
-		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/js/waypoints/jquery.waypoints.min.js",
-		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/js/jquery.waypoints.js",
-		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/prom-eng/web/index.html",
-		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/prom-eng/web/js/scripts.js",
-		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/font-awesome-4.3.0/css/font-awesome.css",
-		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/font-awesome-4.3.0/css/font-awesome.min.css",
-		"/C/!-Slava/!-Projects/!-inProcess/Promengineering/02.design/web/about.html",
-		"/C/!-Slava/!-Projects/!-inProcess/Promengineering/02.design/web/sab.html",
-		"/C/!-Slava/!-Projects/!-inProcess/Promengineering/02.design/web/haimer.html",
-		"/C/Users/Slava/Documents/Euro Truck Simulator 2/profiles/536C617661/config.cfg",
-		"/C/Users/Slava/Documents/Euro Truck Simulator 2/profiles/536C617661/controls.sii",
-		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/candyface/jpg.pages/project02.html"
+		"/C/!-Slava/!-Projects/!-inProcess/Promengineering/02.design/web/js/scripts.js"
 	],
 	"find":
 	{
@@ -498,6 +547,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"span",
+			"offset",
+			"\" ",
+			"12px",
+			"renderElement",
+			"devices",
+			"i",
+			"port",
+			"1",
 			"head",
 			"a ",
 			"a",
@@ -616,16 +674,7 @@
 			":00",
 			":",
 			"00",
-			"11",
-			"strong",
-			"посреди",
-			"h1",
-			"посреди",
-			"h3",
-			"span",
-			"h3",
-			"strong",
-			"logo--threecol"
+			"11"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -654,7 +703,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -662,55 +711,59 @@
 					"file": "src/index.jade",
 					"settings":
 					{
-						"buffer_size": 179,
+						"buffer_size": 653,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								111,
-								111
+								653,
+								653
 							]
 						],
 						"settings":
 						{
 							"auto_name": "doctype html",
 							"incomplete_sync": null,
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 45.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/C/!-Slava/GitHub/MockupWebView/less/app.less",
+					"file": "pub/devices.json",
 					"settings":
 					{
-						"buffer_size": 2941,
+						"buffer_size": 2390,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								25,
-								0
+								1202,
+								1230
 							]
 						],
 						"settings":
 						{
+							"auto_name": "[",
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 630.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -720,15 +773,15 @@
 					"file": "gulpfile.js",
 					"settings":
 					{
-						"buffer_size": 1458,
+						"buffer_size": 2210,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								964,
-								970
+								990,
+								990
 							]
 						],
 						"settings":
@@ -745,21 +798,27 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
 					"buffer": 3,
 					"file": "src/js/app.js",
 					"settings":
 					{
-						"buffer_size": 76,
+						"buffer_size": 6311,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								76,
-								76
+								2489,
+								2489
 							]
 						],
 						"settings":
@@ -770,16 +829,41 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1575.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/less/styles.less",
+					"settings":
+					{
+						"buffer_size": 1805,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1238,
+								1238
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				}
-			]
-		},
-		{
-			"sheets":
-			[
 			]
 		}
 	],
@@ -811,7 +895,7 @@
 		"cols":
 		[
 			0.0,
-			0.540418118467,
+			0.261736784851,
 			1.0
 		],
 		"rows":

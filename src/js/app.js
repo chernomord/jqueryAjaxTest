@@ -31,37 +31,72 @@ function getDevices(config){
 function load(){
     console.log( "populating ..." ); // debug
     var loadingData = getDevices(devicesConf).done(function(devices){
+    	$dropped = false;
     	$devices = devices;
-
+    	$IdsCollection = SortIdsByTypes($devices);
     	// 
     	// droppable area interaction and data binding setting
     	// 
 		$('.table').droppable({
-			// accept: function (event, ui) {
-			// 	if ($(this))
+			activeClass: "ui-state-default",
+			hoverClass: 'ui-state-hover',
 			tolerance: 'fit',
-			// },
 	    	drop: function( event, ui ) {
+	    		// ui.draggable.data('dropped', true);
 				// Hold instance of element
-				var newHelp = $(ui.helper)
-					.clone(false)
-				    .removeClass('ui-draggable-dragging');  
-			    $(this).append(newHelp.draggable().selectable());
-				// var parent = 
+				// check element origin - new or from workspace
+				var thisGrName = ui.helper.attr('data-group');
+				if ($(ui.helper).hasClass('element--group') ) {
+					// var newId = $IdsCollection[thisGrName].pop();
 
-				// Element delete button
-				$('.element__del').click( function() {
-					$(this).parent().remove();
-				});
-				// $(.)
+					$dropped = true;
+
+					var newHelp = $(ui.helper)
+						.clone(false)
+						// .attr('data-id', newId)
+					    .removeClass('ui-draggable-dragging')
+					    .removeClass('element--group')
+					    .css("opacity" , "1");  
+				    $(this).append(newHelp.draggable({ containment: "parent" }) );
+
+				    var thisId = parseInt(ui.helper.attr('data-id'));
+				    newHelp.children('.element__del').attr('data-id', thisId);
+					// Element delete button - adding interactivity
+					$('span.element__del[data-id="'+ thisId +'"]' ).click( function() {
+
+
+						var helper = $(this).parent();
+						var thisGrName = helper.attr('data-group');
+						var thisId = parseInt(helper.attr('data-id'));
+						console.log(thisId);
+						console.log($IdsCollection[thisGrName]);
+
+		    			$IdsCollection[thisGrName].push(thisId);
+		    			console.log($IdsCollection[thisGrName]);
+		
+		    			var ancestorGroup = $('.element--group' && '[data-group="'+ thisGrName +'"]');
+						ancestorGroup.children('.element__counter').text($IdsCollection[thisGrName].length);
+
+						helper.animate({
+						  opacity: 0,
+						  left: 700     ,
+						  top: 200
+						}, 100, function() {
+						    helper.remove();
+						    });        
+
+					});
+					
+				} else {return false};
+				
 	    	}
 	    });
 
-		var types = SortIdsByTypes($devices);
+		
 
 		// rendering palette types and getting data
 
-		renderElements($devices, types);
+		renderElements($devices, $IdsCollection);
 
 	});
 
@@ -92,19 +127,20 @@ function SortIdsByTypes(dataArray) {
 
 	var uniqueTypes = uniq(types);
 
-	var IdsCollection = [];
+	IdsCollection = {};
 
 	for ( t=0; t < uniqueTypes.length; t++ ) {
-		IdsCollection[t] = [];
-		var a = uniqueTypes[t];
-		IdsCollection[t][0] = uniqueTypes[t];
-		IdsCollection[t][1] = [];
+
+		IdsCollection[uniqueTypes[t]] = [];
+
 		for ( i=0; i < typesIds.length; i++) {
 			if ( typesIds[i][0] == uniqueTypes[t] ) {
-				IdsCollection[t][1].push(typesIds[i][1]);
+				IdsCollection[uniqueTypes[t]].push(typesIds[i][1]);
 			};
 		};
-	};
+	}; 
+
+	console.log(IdsCollection);
 
 	return IdsCollection;
 };
@@ -116,41 +152,72 @@ function SortIdsByTypes(dataArray) {
 function renderElements(dataArray, IdsCollection) {
 
 	// loop for number of objects types
-	for ( i = 0; i < IdsCollection.length; i++ ) {
+	for (var grName in IdsCollection) {if (IdsCollection.hasOwnProperty(grName)) {
 
 		var conf = function (item, idx) {
-			 if ( item.type == IdsCollection[i][0] ) { return true };
+			 if ( item.type == grName ) { return true };
 		};
 
 		var filtered = dataArray.filter(conf);
 	    $("div.elements__box")
 	    .append(
-	    	'<div class="element " id="' + IdsCollection[i][0] + '">'
-	    	+ IdsCollection[i][0].replace(/_/g, ' ') + 
+	    	'<div class="element--group" data-group="' + grName 
+	    	+ '"data-obj-count="' + IdsCollection[grName].length  + '">'
+	    	+ grName.replace(/_/g, ' ') + 
 	    	'<div class="element__counter">' + filtered.length + '</div>'
 	    	+ '</div>'
 	    );
-	    $('.element#' + IdsCollection[i][0])
-	    .data(filtered)
+	    $('[data-group="' + grName +'"]' )
 	    .draggable({ 
+	    	opacity : 0.7,
 	    	helper : "clone",
 	    	revert : "invalid",
 	    	start : function(event,ui) { 
-	    		console.log($devices); 
-	    		return ui.helper.children('div')
+    			var thisGrName = ui.helper.attr('data-group');
+
+	    		// check if any objects left in group
+	    		// if any - pop last ID number from collection,
+	    		// translate it to data-id at helper obj
+	    		// and update obj tyles counter 
+	    		if ( $IdsCollection[thisGrName].length > 0 ) {
+	    			var newId = $IdsCollection[thisGrName].pop();
+	    			var newCounter = $IdsCollection[thisGrName].length;
+	    			$(this).children('.element__counter').text(newCounter);
+
+	    		return ui.helper
+	    			.attr('data-id', newId)
+	    			.children('div')
 	    			.css("display", "none")
 	    			.parent()
 	    			.addClass('element--inst')
-	    			.append('<span class="element__del">x</span>')	;	
-	    	}
-	    });
+	    			.append('<span class="element__del">x</span>');	
+	    		} else { return false };
+	    	},
+    	    stop: function(event, ui) {
+		    	var thisGrName = ui.helper.attr('data-group');
 
-	};
-	console.log($('.element#media_player').data()[2] );
+		    	// check if helper actually dropped at droppable area
+		    	// if not - push ID number back at collection
+		    	// and update obj tyles counter accordingly
+		    	if ($dropped == false ) { 
+		    		var Idback = ui.helper.attr('data-id');
+		    		$IdsCollection[thisGrName].push(Idback);
+		    		$(this).children('.element__counter').text($IdsCollection[thisGrName].length);
+		    		return 
+		    	   } 
+		    	else { $dropped = false;  return }
+		    }
+
+	    });
+	}};
+	
+	console.log( IdsCollection );
+	// // finds list of Id's by group name
+	// var getGrN = $('[data-group="media_player"]').attr('data-group');
+	// var groupArr = $.inArray(getGrN, IdsCollection[0]);
+	// console.log(IdsCollection[groupArr][1] );
 
 };
-
-
 
 
 // app init
