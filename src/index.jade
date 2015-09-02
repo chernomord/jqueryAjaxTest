@@ -13,13 +13,24 @@ head
 	link(href="css/styles.css",rel="stylesheet")
 
 	body
-		section(class="container")
-			h1 Тестовое задание
+		section.header
+			div.container
+					h1 Тестовое задание
 			
-		section(class="container")
-			div(class="col editor") editor
-			div(class="col table") 
-				h1 workplace
-			div(class="col elements__box") collection
-				p(id="loading", style="display:hidden") json loading...
+		section.container
+			div.row
+				div.col.col-left
+					h2 editor
+				div.col.col-middle
+				div.col.col-right
+					h2 collection
+			div.row
+				div.col.editor
+				div.col
+					div.table 
+						h1 workplace 
+						p (drag objects here)
+				div.col.elements__box 
+					
+					p(id="loading", style="display:hidden") json loading...
 		

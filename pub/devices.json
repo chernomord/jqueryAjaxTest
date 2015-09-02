@@ -14,9 +14,9 @@
 		"type" : "media_player" ,
 		"properties" : 
 			{
-				"name" : "Name 1",
-				"serial" : "Serial 1",
-				"model" : "Model 1"
+				"name" : "Name 2",
+				"serial" : "Serial 2",
+				"model" : "Model 2"
 			}
 	},	
 	{
@@ -24,9 +24,9 @@
 		"type" : "media_player" ,
 		"properties" : 
 			{
-				"name" : "Name 1",
-				"serial" : "Serial 1",
-				"model" : "Model 1"
+				"name" : "Name 3",
+				"serial" : "Serial 3",
+				"model" : "Model 3"
 			}
 	},	
 	{
@@ -34,9 +34,9 @@
 		"type" : "media_player" ,
 		"properties" : 
 			{
-				"name" : "Name 1",
-				"serial" : "Serial 1",
-				"model" : "Model 1"
+				"name" : "Name 4",
+				"serial" : "Serial 4",
+				"model" : "Model 4"
 			}
 	},	
 	{
@@ -44,9 +44,9 @@
 		"type" : "media_player" ,
 		"properties" : 
 			{
-				"name" : "Name 1",
-				"serial" : "Serial 1",
-				"model" : "Model 1"
+				"name" : "Name 5",
+				"serial" : "Serial 5",
+				"model" : "Model 5"
 			}
 	},
 	{
@@ -54,9 +54,9 @@
 		"type" : "media_server" ,
 		"properties" : 
 			{
-				"name" : "Name 2",
-				"serial" : "Serial 2",
-				"model" : "Model 2"
+				"name" : "Name 6",
+				"serial" : "Serial 6",
+				"model" : "Model 6"
 			}
 	},
 	{
@@ -64,9 +64,9 @@
 		"type" : "media_server" ,
 		"properties" : 
 			{
-				"name" : "Name 2",
-				"serial" : "Serial 2",
-				"model" : "Model 2"
+				"name" : "Name 7",
+				"serial" : "Serial 7",
+				"model" : "Model 7"
 			}
 	},
 	{
@@ -74,9 +74,9 @@
 		"type" : "media_server" ,
 		"properties" : 
 			{
-				"name" : "Name 2",
-				"serial" : "Serial 2",
-				"model" : "Model 2"
+				"name" : "Name 8",
+				"serial" : "Serial 8",
+				"model" : "Model 8"
 			}
 	},
 	{
@@ -84,9 +84,9 @@
 		"type" : "media_server" ,
 		"properties" : 
 			{
-				"name" : "Name 2",
-				"serial" : "Serial 2",
-				"model" : "Model 2"
+				"name" : "Name 9",
+				"serial" : "Serial 9",
+				"model" : "Model 9"
 			}
 	},
 	{
@@ -94,9 +94,9 @@
 		"type" : "media_server" ,
 		"properties" : 
 			{
-				"name" : "Name 2",
-				"serial" : "Serial 2",
-				"model" : "Model 2"
+				"name" : "Name 10",
+				"serial" : "Serial 10",
+				"model" : "Model 10"
 			}
 	},
 	{
@@ -104,9 +104,9 @@
 		"type" : "media_display" ,
 		"properties" : 
 			{
-				"name" : "Name 3",
-				"serial" : "Serial 3",
-				"model" : "Model 3"
+				"name" : "Name 11",
+				"serial" : "Serial 11",
+				"model" : "Model 11"
 			}
 	},
 	{
@@ -114,9 +114,9 @@
 		"type" : "media_display" ,
 		"properties" : 
 			{
-				"name" : "Name 3",
-				"serial" : "Serial 3",
-				"model" : "Model 3"
+				"name" : "Name 12",
+				"serial" : "Serial 12",
+				"model" : "Model 12"
 			}
 	},
 	{
@@ -124,19 +124,21 @@
 		"type" : "media_display" ,
 		"properties" : 
 			{
-				"name" : "Name 3",
-				"serial" : "Serial 3",
-				"model" : "Model 3"
+				"name" : "Name 13",
+				"serial" : "Serial 13",
+				"model" : "Model 13"
 			}
 	},
 	{
 		"id" :99,
-		"type" : "unpred_type_test" ,
+		"type" : "unpred_data_model" ,
 		"properties" : 
 			{
-				"name" : "Name 3",
-				"serial" : "Serial 3",
-				"model" : "Model 3"
+				"name" : "New object",
+				"serial" : "45454:54545:53434",
+				"model" : "Test Model",
+				"MAC" : "F4:45:74:34:23:34:23:FF",
+				"IP" : "127.0.0.1"
 			}
 	},	
 	{
@@ -144,9 +146,9 @@
 		"type" : "media_display" ,
 		"properties" : 
 			{
-				"name" : "Name 3",
-				"serial" : "Serial 3",
-				"model" : "Model 3"
+				"name" : "Name 14",
+				"serial" : "Serial 14",
+				"model" : "Model 14"
 			}
 	},
 	{
@@ -154,9 +156,9 @@
 		"type" : "media_display" ,
 		"properties" : 
 			{
-				"name" : "Name 3",
-				"serial" : "Serial 3",
-				"model" : "Model 3"
+				"name" : "Name 15",
+				"serial" : "Serial 15",
+				"model" : "Model 15"
 			}
 	}
 ]

@@ -25,15 +25,89 @@ function getDevices(config){
 };
 
 
+// find object id in $devices array by propery ID value
+function findDeviceID (idValue) {
+	for (i=0; i < $devices.length; i++) {
+		if ($devices[i].id == idValue) { return i } 
+	}
+}
+
+// get 'properties' object from $devices by given its array ID
+function getDeviceProps (arrayId) {
+	return $devices[arrayId].properties
+}
+
+// replace $devices object 'properties' by its ID with new object 
+function replaceDeviceProps (newPropsObj, idValue) {
+	var arrayID = findDeviceID(idValue);
+	$devices[arrayID].properties = newPropsObj;
+}
+
+// Serialize form data into object format
+$.fn.serializeObject = function()
+{
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function() {
+        if (o[this.name] !== undefined) {
+            if (!o[this.name].push) {
+                o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+        } else {
+            o[this.name] = this.value || '';
+        }
+    });
+    return o;
+};
+
+// Render editor form
+// based on 'id' data property value
+function renderEditorForm (idValue) {
+
+	// form body template
+	var $formBody = $('<form name="properties" data-id="'+ idValue +'" method="post" action=""></form>');
+	// inputs template
+	function formInput(property) {
+		for(var key in property) {
+		return $('<div class="input"><span class="label">'+ key +'</span><input type="text" name="'+ key +'" value="'+ property[key] +'"></div>')
+		}
+	};
+	var properties = getDeviceProps(findDeviceID(idValue));
+
+	$('form[name="properties"]').remove();
+
+	for (var property in properties) {
+	    if (properties.hasOwnProperty(property)) {
+	        $formBody
+	        .append(formInput( { [property] : properties[property] })
+	        	// saving new values on key down event for each field
+	        .keyup(function(){
+	        	var newProperties = $('form[name="properties"]').serializeObject();
+	        	var arrayID = findDeviceID(idValue);
+	        	$devices[arrayID].properties = newProperties;
+	        }));
+	    }
+	};
+	// actually render form
+	$('.editor').append($formBody);
+};
+
+
+
 // Main module
 // Retrieving data and Application loading
 
 function load(){
     console.log( "populating ..." ); // debug
-    var loadingData = getDevices(devicesConf).done(function(devices){
+
+    getDevices(devicesConf).done(function(devices){
+    	// Declaring and calculating global variables for data binding
     	$dropped = false;
     	$devices = devices;
     	$IdsCollection = SortIdsByTypes($devices);
+    	var $lastActive; /*last selected object*/
+
     	// 
     	// droppable area interaction and data binding setting
     	// 
@@ -47,41 +121,62 @@ function load(){
 				// check element origin - new or from workspace
 				var thisGrName = ui.helper.attr('data-group');
 				if ($(ui.helper).hasClass('element--group') ) {
-					// var newId = $IdsCollection[thisGrName].pop();
 
 					$dropped = true;
 
 					var newHelp = $(ui.helper)
 						.clone(false)
-						// .attr('data-id', newId)
 					    .removeClass('ui-draggable-dragging')
 					    .removeClass('element--group')
-					    .css("opacity" , "1");  
-				    $(this).append(newHelp.draggable({ containment: "parent" }) );
+					    .css("opacity" , "1")
+					    .addClass('noclick')
+					    .draggable({ containment: "parent" })
+					    // Object element - defining it's interactivity
+					    // render editor form on click
+					    .click(function(){
+
+				    	    if ($lastActive) {
+					    	    $lastActive.removeClass('selected');}
+				    	    $(this).addClass('selected');
+				    	    $lastActive = $(this);
+				    	    renderEditorForm(thisId);
+
+				    	});  
+				    $(this).append(newHelp );
 
 				    var thisId = parseInt(ui.helper.attr('data-id'));
 				    newHelp.children('.element__del').attr('data-id', thisId);
+
+
 					// Element delete button - adding interactivity
-					$('span.element__del[data-id="'+ thisId +'"]' ).click( function() {
+					$('span.element__del[data-id="'+ thisId +'"]' ).click( function(e) {
 
 
-						var helper = $(this).parent();
-						var thisGrName = helper.attr('data-group');
-						var thisId = parseInt(helper.attr('data-id'));
-						console.log(thisId);
-						console.log($IdsCollection[thisGrName]);
-
+						$(this).parent().attr('onclick','').unbind('click');
+						var helper = $(this).parent(),
+							thisGrName = helper.attr('data-group'),
+							thisId = parseInt(helper.attr('data-id')),
+		    				ancestorGroup = $('.element--group[data-group="'+ thisGrName +'"]'),
+		    				ancCounter = ancestorGroup.children('.element__counter');
+						// delete editor form if this object is active
+						if ($('form[name="properties"]').attr('data-id') == thisId) {
+							$('form[name="properties"]').remove();}
+						// push element back to croup id's collection
 		    			$IdsCollection[thisGrName].push(thisId);
-		    			console.log($IdsCollection[thisGrName]);
-		
-		    			var ancestorGroup = $('.element--group' && '[data-group="'+ thisGrName +'"]');
-						ancestorGroup.children('.element__counter').text($IdsCollection[thisGrName].length);
+						
+						ancCounter.addClass('counter--active');
+						ancCounter.text($IdsCollection[thisGrName].length);
+						ancestorGroup.removeClass('disabled');
 
+						var offsetX = ancestorGroup.offset().left,
+							offsetY = ancestorGroup.offset().top;
+							helper.zIndex(50);
 						helper.animate({
-						  opacity: 0,
-						  left: 700     ,
-						  top: 200
-						}, 100, function() {
+						  opacity: .5,
+						  left: offsetX -4,
+						  top: offsetY
+						}, 200, function() {
+							ancCounter.removeClass('counter--active');
 						    helper.remove();
 						    });        
 
@@ -94,13 +189,13 @@ function load(){
 
 		
 
-		// rendering palette types and getting data
+		// rendering palette of types and getting data
 
 		renderElements($devices, $IdsCollection);
 
 	});
 
-    $.when(loadingData)
+    $.when()
      .done(console.log( "populating : done")); // debug
 };
 
@@ -109,6 +204,9 @@ function load(){
 
 // data mining module for unpredictable number of types of objects
 // getting array = [type_Name,[type_Ids]]
+// 
+// Results are essential for two way data binding
+// 
 function SortIdsByTypes(dataArray) {
 
 	function uniq(a) {
@@ -140,7 +238,6 @@ function SortIdsByTypes(dataArray) {
 		};
 	}; 
 
-	console.log(IdsCollection);
 
 	return IdsCollection;
 };
@@ -180,9 +277,15 @@ function renderElements(dataArray, IdsCollection) {
 	    		// translate it to data-id at helper obj
 	    		// and update obj tyles counter 
 	    		if ( $IdsCollection[thisGrName].length > 0 ) {
+	    			if ( $IdsCollection[thisGrName].length == 1 ) {
+	    				$(this).addClass('disabled');
+	    			};
 	    			var newId = $IdsCollection[thisGrName].pop();
 	    			var newCounter = $IdsCollection[thisGrName].length;
+
+
 	    			$(this).children('.element__counter').text(newCounter);
+
 
 	    		return ui.helper
 	    			.attr('data-id', newId)
@@ -200,6 +303,7 @@ function renderElements(dataArray, IdsCollection) {
 		    	// if not - push ID number back at collection
 		    	// and update obj tyles counter accordingly
 		    	if ($dropped == false ) { 
+		    		$(this).removeClass('disabled');
 		    		var Idback = ui.helper.attr('data-id');
 		    		$IdsCollection[thisGrName].push(Idback);
 		    		$(this).children('.element__counter').text($IdsCollection[thisGrName].length);
@@ -211,7 +315,7 @@ function renderElements(dataArray, IdsCollection) {
 	    });
 	}};
 	
-	console.log( IdsCollection );
+	// console.log( IdsCollection );
 	// // finds list of Id's by group name
 	// var getGrN = $('[data-group="media_player"]').attr('data-group');
 	// var groupArr = $.inArray(getGrN, IdsCollection[0]);
