@@ -5,9 +5,9 @@ head
 	title jQuery Ajax test case
 	script(src="js/allvendor.min.js")
 	//- debug
-	script(src="js/app.js") 
+	//- script(src="js/app.js") 
 	//- production
-	//- script(src="js/app.min.js")
+	script(src="js/app.min.js")
 	link(href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300&subset=latin,cyrillic",
 		rel='stylesheet', type="text/css")
 	link(href="css/styles.css",rel="stylesheet")
@@ -20,17 +20,18 @@ head
 		section.container
 			div.row
 				div.col.col-left
-					h2 editor
+					h2 редактор
 				div.col.col-middle
 				div.col.col-right
-					h2 collection
+					h2 группы
 			div.row
 				div.col.editor
 				div.col
 					div.table 
-						h1 workplace 
-						p (drag objects here)
+						h1 рабочая область 
+						p (перетаскивать сюда)
 				div.col.elements__box 
 					
 					p(id="loading", style="display:hidden") json loading...
-		
+			div.row
+				p #[a(href="https://github.com/chernomord/jqueryAjaxTest") Исходник] на Github.

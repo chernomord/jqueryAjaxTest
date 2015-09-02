@@ -61,7 +61,7 @@ $.fn.serializeObject = function()
     return o;
 };
 
-// Render editor form
+// Render editor form 
 // based on 'id' data property value
 function renderEditorForm (idValue) {
 
@@ -79,133 +79,27 @@ function renderEditorForm (idValue) {
 
 	for (var property in properties) {
 	    if (properties.hasOwnProperty(property)) {
+	    	var newProp = {};
+	    	newProp[property] = properties[property];
 	        $formBody
-	        .append(formInput( { [property] : properties[property] })
-	        	// saving new values on key down event for each field
-	        .keyup(function(){
-	        	var newProperties = $('form[name="properties"]').serializeObject();
-	        	var arrayID = findDeviceID(idValue);
-	        	$devices[arrayID].properties = newProperties;
-	        }));
+	        .append(
+	        	formInput( newProp).keyup(function(){
+		        	var newProperties = $('form[name="properties"]').serializeObject();
+		        	var arrayID = findDeviceID(idValue); 
+		        	$devices[arrayID].properties = newProperties;
+		        })
+	        );
 	    }
 	};
 	// actually render form
 	$('.editor').append($formBody);
 };
-
-
-
-// Main module
-// Retrieving data and Application loading
-
-function load(){
-    console.log( "populating ..." ); // debug
-
-    getDevices(devicesConf).done(function(devices){
-    	// Declaring and calculating global variables for data binding
-    	$dropped = false;
-    	$devices = devices;
-    	$IdsCollection = SortIdsByTypes($devices);
-    	var $lastActive; /*last selected object*/
-
-    	// 
-    	// droppable area interaction and data binding setting
-    	// 
-		$('.table').droppable({
-			activeClass: "ui-state-default",
-			hoverClass: 'ui-state-hover',
-			tolerance: 'fit',
-	    	drop: function( event, ui ) {
-	    		// ui.draggable.data('dropped', true);
-				// Hold instance of element
-				// check element origin - new or from workspace
-				var thisGrName = ui.helper.attr('data-group');
-				if ($(ui.helper).hasClass('element--group') ) {
-
-					$dropped = true;
-
-					var newHelp = $(ui.helper)
-						.clone(false)
-					    .removeClass('ui-draggable-dragging')
-					    .removeClass('element--group')
-					    .css("opacity" , "1")
-					    .addClass('noclick')
-					    .draggable({ containment: "parent" })
-					    // Object element - defining it's interactivity
-					    // render editor form on click
-					    .click(function(){
-
-				    	    if ($lastActive) {
-					    	    $lastActive.removeClass('selected');}
-				    	    $(this).addClass('selected');
-				    	    $lastActive = $(this);
-				    	    renderEditorForm(thisId);
-
-				    	});  
-				    $(this).append(newHelp );
-
-				    var thisId = parseInt(ui.helper.attr('data-id'));
-				    newHelp.children('.element__del').attr('data-id', thisId);
-
-
-					// Element delete button - adding interactivity
-					$('span.element__del[data-id="'+ thisId +'"]' ).click( function(e) {
-
-
-						$(this).parent().attr('onclick','').unbind('click');
-						var helper = $(this).parent(),
-							thisGrName = helper.attr('data-group'),
-							thisId = parseInt(helper.attr('data-id')),
-		    				ancestorGroup = $('.element--group[data-group="'+ thisGrName +'"]'),
-		    				ancCounter = ancestorGroup.children('.element__counter');
-						// delete editor form if this object is active
-						if ($('form[name="properties"]').attr('data-id') == thisId) {
-							$('form[name="properties"]').remove();}
-						// push element back to croup id's collection
-		    			$IdsCollection[thisGrName].push(thisId);
-						
-						ancCounter.addClass('counter--active');
-						ancCounter.text($IdsCollection[thisGrName].length);
-						ancestorGroup.removeClass('disabled');
-
-						var offsetX = ancestorGroup.offset().left,
-							offsetY = ancestorGroup.offset().top;
-							helper.zIndex(50);
-						helper.animate({
-						  opacity: .5,
-						  left: offsetX -4,
-						  top: offsetY
-						}, 200, function() {
-							ancCounter.removeClass('counter--active');
-						    helper.remove();
-						    });        
-
-					});
-					
-				} else {return false};
-				
-	    	}
-	    });
-
-		
-
-		// rendering palette of types and getting data
-
-		renderElements($devices, $IdsCollection);
-
-	});
-
-    $.when()
-     .done(console.log( "populating : done")); // debug
-};
-
-
-
+ 
 
 // data mining module for unpredictable number of types of objects
 // getting array = [type_Name,[type_Ids]]
 // 
-// Results are essential for two way data binding
+// Results are foundation of two way data binding
 // 
 function SortIdsByTypes(dataArray) {
 
@@ -314,14 +208,116 @@ function renderElements(dataArray, IdsCollection) {
 
 	    });
 	}};
-	
-	// console.log( IdsCollection );
-	// // finds list of Id's by group name
-	// var getGrN = $('[data-group="media_player"]').attr('data-group');
-	// var groupArr = $.inArray(getGrN, IdsCollection[0]);
-	// console.log(IdsCollection[groupArr][1] );
-
 };
+
+// Main module
+// Retrieving data and Application loading
+
+function load(){
+    console.log( "populating ..." ); // debug
+
+    getDevices(devicesConf).done(function(devices){
+    	// Declaring and calculating global variables for data binding
+    	$dropped = false;
+    	$devices = devices;
+    	$IdsCollection = SortIdsByTypes($devices);
+    	var $lastActive; /*last selected object*/
+
+    	// 
+    	// droppable area interaction and data binding setting
+    	// 
+		$('.table').droppable({
+			activeClass: "ui-state-default",
+			hoverClass: 'ui-state-hover',
+			tolerance: 'fit',
+	    	drop: function( event, ui ) {
+	    		// ui.draggable.data('dropped', true);
+				// Hold instance of element
+				// check element origin - new or from workspace
+				var thisGrName = ui.helper.attr('data-group');
+				if ($(ui.helper).hasClass('element--group') ) {
+
+					$dropped = true;
+
+					var newHelp = $(ui.helper)
+						.clone(false)
+					    .removeClass('ui-draggable-dragging')
+					    .removeClass('element--group')
+					    .css("opacity" , "1")
+					    .addClass('noclick')
+					    .draggable({ 
+					    	containment: "parent", 
+					    	stack: "div",
+					    	revert: "invalid" })
+					    // Object element - defining it's interactivity
+					    // render editor form on click
+					    .click(function(){
+
+				    	    if ($lastActive) {
+					    	    $lastActive.removeClass('selected');}
+				    	    $(this).addClass('selected');
+				    	    $lastActive = $(this);
+				    	    renderEditorForm(thisId);
+
+				    	});  
+				    $(this).append(newHelp );
+
+				    var thisId = parseInt(ui.helper.attr('data-id'));
+				    newHelp.children('.element__del').attr('data-id', thisId);
+
+
+					// Element delete button - adding interactivity
+					$('span.element__del[data-id="'+ thisId +'"]' ).click( function(e) {
+
+
+						$(this).parent().attr('onclick','').unbind('click');
+						var helper = $(this).parent(),
+							thisGrName = helper.attr('data-group'),
+							thisId = parseInt(helper.attr('data-id')),
+		    				ancestorGroup = $('.element--group[data-group="'+ thisGrName +'"]'),
+		    				ancCounter = ancestorGroup.children('.element__counter');
+						// delete editor form if this object is active
+						if ($('form[name="properties"]').attr('data-id') == thisId) {
+							$('form[name="properties"]').remove();}
+						// push element back to croup id's collection
+		    			$IdsCollection[thisGrName].push(thisId);
+						
+						ancCounter.addClass('counter--active');
+						ancCounter.text($IdsCollection[thisGrName].length);
+						ancestorGroup.removeClass('disabled');
+
+						var offsetX = ancestorGroup.offset().left,
+							offsetY = ancestorGroup.offset().top;
+							helper.zIndex(50);
+						helper.animate({
+						  opacity: .5,
+						  left: offsetX,
+						  top: offsetY
+						}, 200, function() {
+							ancCounter.removeClass('counter--active');
+						    helper.remove();
+						    });        
+
+					});
+					
+				} else {return false};
+				
+	    	}
+	    });
+
+		
+
+		// rendering palette of types and getting data
+
+		renderElements($devices, $IdsCollection);
+
+	});
+
+    $.when()
+     .done(console.log( "populating : done")); // debug
+};
+
+
 
 
 // app init

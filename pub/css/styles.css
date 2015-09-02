@@ -244,9 +244,6 @@ h2 {
   margin-top: 5px;
   font-weight: 800;
 }
-.ui-state-hover {
-  background-color: rgba(150, 150, 0, 0.1) !important;
-}
 .ui-state-default {
   background-color: rgba(0, 200, 150, 0.05);
 }
@@ -274,24 +271,26 @@ h2 {
 .element--inst {
   background-color: #f0f0f0;
   border-color: #00c8c8;
+  margin: 0px;
 }
 .element--inst.selected {
-  background-color: #dcfafa;
+  border-color: #fa3232;
 }
 .element__del {
   position: absolute;
   font-size: 9px;
   right: 3px;
   top: 3px;
-  padding-left: 1px;
-  line-height: 14px;
-  width: 14px;
-  height: 14px;
+  padding-left: 0px;
+  line-height: 12px;
+  width: 13px;
+  height: 13px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 2px;
   text-align: center;
   vertical-align: middle;
   background-color: rgba(200, 75, 0, 0);
+  text-transform: none;
 }
 .element__del:hover {
   background-color: #c84b00;
@@ -328,6 +327,9 @@ form[name="properties"] {
 }
 form[name="properties"] div {
   padding-top: 12px;
+}
+form[name="properties"] div:first-child {
+  padding-top: 0px;
 }
 form[name="properties"] div.input {
   text-align: left;
