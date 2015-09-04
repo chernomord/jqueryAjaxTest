@@ -4,6 +4,70 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"text-transform"
+			],
+			[
+				"fo",
+				"font-style"
+			],
+			[
+				"offs",
+				"offsetY"
+			],
+			[
+				"off",
+				"offset	.offset()"
+			],
+			[
+				"prop",
+				"properties"
+			],
+			[
+				"ke",
+				"keydown	.keydown()"
+			],
+			[
+				"rem",
+				"removeClass	.removeClass()"
+			],
+			[
+				"add",
+				"addClass	.addClass()"
+			],
+			[
+				"border",
+				"border-color"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"proper",
+				"property"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"fin",
+				"findObjID"
+			],
+			[
+				"ser",
+				"serializeArray	.serializeArray()"
+			],
+			[
+				"rgb",
+				"rgba(r,g,b,a)"
+			],
+			[
+				"ad",
+				"addClass	.addClass()"
+			],
+			[
 				"padd",
 				"padding-top"
 			],
@@ -24,10 +88,6 @@
 				"log"
 			],
 			[
-				"rem",
-				"removeClass	.removeClass()"
-			],
-			[
 				"ha",
 				"hasClass	.hasClass()"
 			],
@@ -46,10 +106,6 @@
 			[
 				"margin",
 				"margin"
-			],
-			[
-				"text",
-				"text-align"
 			],
 			[
 				"border-r",
@@ -90,10 +146,6 @@
 			[
 				"c",
 				"color"
-			],
-			[
-				"fo",
-				"font-size"
 			],
 			[
 				"margi",
@@ -140,15 +192,7 @@
 				"margin-bottom"
 			],
 			[
-				"fon",
-				"font-size"
-			],
-			[
 				"bor",
-				"border"
-			],
-			[
-				"border",
 				"border"
 			],
 			[
@@ -190,10 +234,6 @@
 			[
 				"s",
 				"src"
-			],
-			[
-				"rgb",
-				"rgba()"
 			],
 			[
 				"pad",
@@ -331,7 +371,7 @@
 			"file": "src/index.jade",
 			"settings":
 			{
-				"buffer_size": 653,
+				"buffer_size": 873,
 				"line_ending": "Windows",
 				"name": "doctype html"
 			}
@@ -340,24 +380,24 @@
 			"file": "pub/devices.json",
 			"settings":
 			{
-				"buffer_size": 2390,
+				"buffer_size": 2488,
 				"line_ending": "Windows",
 				"name": "["
-			}
-		},
-		{
-			"file": "gulpfile.js",
-			"settings":
-			{
-				"buffer_size": 2210,
-				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "src/js/app.js",
 			"settings":
 			{
-				"buffer_size": 6311,
+				"buffer_size": 9189,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 97,
 				"line_ending": "Windows"
 			}
 		},
@@ -365,7 +405,7 @@
 			"file": "src/less/styles.less",
 			"settings":
 			{
-				"buffer_size": 1805,
+				"buffer_size": 3048,
 				"line_ending": "Windows"
 			}
 		}
@@ -402,10 +442,15 @@
 	},
 	"file_history":
 	[
+		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/sftp-config.json",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/css/styles.css",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/gulpfile.js",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/package.json",
+		"/C/!-Slava/GitHub/jqueryAjaxTest/index.php",
+		"/C/Users/Слава/AppData/Roaming/Skype/My Skype Received Files/index.php",
 		"/C/Users/Слава/AppData/Roaming/Skype/My Skype Received Files/data.xlsx",
 		"/C/!-Slava/GitHub/MockupWebView/distr/index.html",
 		"/C/!-Slava/GitHub/MockupWebView/distr/mockups.json",
-		"/C/!-Slava/GitHub/jqueryAjaxTest/gulpfile.js",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/bower_components/jquery-ui/package.json",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/bower_components/jquery-ui/component.json",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/bower_components/jquery-ui/composer.json",
@@ -414,14 +459,12 @@
 		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/start-web-server.bat",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/web-server.js",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/js/app.min.js",
-		"/C/!-Slava/GitHub/jqueryAjaxTest/package.json",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/index.html",
 		"/C/!-Slava/GitHub/MockupWebView/less/app.less",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/js/all-vendor.js",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/src/js/zapp.js",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/js/all.js",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/src/less/normalize.less",
-		"/C/!-Slava/GitHub/jqueryAjaxTest/pub/css/styles.css",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/src/less/styles.less",
 		"/C/!-Slava/GitHub/jqueryAjaxTest/gulp.js",
 		"/C/!-Slava/!-Projects/!-inProcess/emvio-webprototype/WebCode/css/bootstrap.css",
@@ -526,10 +569,7 @@
 		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/tceh/jpg.pages/landing-renesc.html",
 		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/candyface/index.html",
 		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/onlime/index.html",
-		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/prom-eng/index.html",
-		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Site.html/js/jquery/jquery.min.js",
-		"/C/!-Slava/!-Projects/!-inProcess/Promengineering/02.design/web/css/styles.css",
-		"/C/!-Slava/!-Projects/!-inProcess/Promengineering/02.design/web/js/scripts.js"
+		"/C/!-Slava/!-Projects/!-inProcess/candyface/00.WEB/Projects/prom-eng/index.html"
 	],
 	"find":
 	{
@@ -547,6 +587,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"255",
+			"col",
+			"elements__box",
+			"255",
+			"3",
+			"15",
+			"3",
+			"2",
+			"1",
 			"span",
 			"offset",
 			"\" ",
@@ -665,16 +714,7 @@
 			"column--fancy",
 			"p",
 			"padding",
-			"opacity",
-			"parallax",
-			"li",
-			"persona",
-			"hack",
-			"h1",
-			":00",
-			":",
-			"00",
-			"11"
+			"opacity"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -711,15 +751,15 @@
 					"file": "src/index.jade",
 					"settings":
 					{
-						"buffer_size": 653,
+						"buffer_size": 873,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								653,
-								653
+								682,
+								682
 							]
 						],
 						"settings":
@@ -732,7 +772,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 45.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -742,15 +782,15 @@
 					"file": "pub/devices.json",
 					"settings":
 					{
-						"buffer_size": 2390,
+						"buffer_size": 2488,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1202,
-								1230
+								2146,
+								2146
 							]
 						],
 						"settings":
@@ -763,38 +803,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 630.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "gulpfile.js",
-					"settings":
-					{
-						"buffer_size": 2210,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								990,
-								990
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 225.0,
+						"translation.y": 1749.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -802,23 +811,23 @@
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "src/js/app.js",
 					"settings":
 					{
-						"buffer_size": 6311,
+						"buffer_size": 9189,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2489,
-								2489
+								1625,
+								1625
 							]
 						],
 						"settings":
@@ -829,7 +838,36 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1575.0,
+						"translation.y": 1140.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "README.md",
+					"settings":
+					{
+						"buffer_size": 97,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								36,
+								36
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -839,15 +877,15 @@
 					"file": "src/less/styles.less",
 					"settings":
 					{
-						"buffer_size": 1805,
+						"buffer_size": 3048,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1238,
-								1238
+								1107,
+								1107
 							]
 						],
 						"settings":
@@ -859,7 +897,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
+						"translation.y": 552.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -895,7 +933,7 @@
 		"cols":
 		[
 			0.0,
-			0.261736784851,
+			0.395235673881,
 			1.0
 		],
 		"rows":
@@ -911,7 +949,7 @@
 	},
 	"output.sftp":
 	{
-		"height": 0.0
+		"height": 25.0
 	},
 	"replace":
 	{

@@ -161,7 +161,12 @@ function renderElements(dataArray, IdsCollection) {
 	    $('[data-group="' + grName +'"]' )
 	    .draggable({ 
 	    	opacity : 0.7,
+	    	zIndex: function(event,ui){ 
+	    		var newzindex = $(this).zIndex() +10; 
+	    		return newzindex  
+	    	},
 	    	helper : "clone",
+	    	stack: "div.ui-draggable",
 	    	revert : "invalid",
 	    	start : function(event,ui) { 
     			var thisGrName = ui.helper.attr('data-group');
