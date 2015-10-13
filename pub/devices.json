@@ -144,7 +144,7 @@
 	{
 		"id" :14,
 		"type" : "media_display" ,
-		"properties" : 
+		"properties":
 			{
 				"name" : "Name 14",
 				"serial" : "Serial 14",
@@ -154,7 +154,7 @@
 	{
 		"id" :15,
 		"type" : "media_display" ,
-		"properties" : 
+		"properties":
 			{
 				"name" : "Name 15",
 				"serial" : "Serial 15",

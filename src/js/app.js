@@ -1,7 +1,7 @@
 var devicesConf = {
 	url: "devices.json", type: "GET", dataType : "json",
     success: function( json ) {
-    	// debug
+		// debug
         return json;
     },
     error: function( xhr, status, errorThrown ) {
@@ -20,21 +20,21 @@ function getDevices(config){
     .done(function(devices) {
         d.resolve(devices);
     })
-    .fail(d.reject); 
+    .fail(d.reject);
     return d.promise();
-};
+}
 
 
 // find object id in $devices array by propery ID value
 function findDeviceID (idValue) {
 	for (i=0; i < $devices.length; i++) {
-		if ($devices[i].id == idValue) { return i } 
+		if ($devices[i].id == idValue) { return i; }
 	}
 }
 
 // get 'properties' object from $devices by given its array ID
 function getDeviceProps (arrayId) {
-	return $devices[arrayId].properties
+	return $devices[arrayId].properties;
 }
 
 // replace $devices object 'properties' by its ID with new object 
@@ -194,7 +194,7 @@ function renderElements(dataArray, IdsCollection) {
 	    			.addClass('element--inst')
 	    			.append('<span class="element__del">x</span>');	
 	    		} else { return false };
-	    	},
+			},
     	    stop: function(event, ui) {
 		    	var thisGrName = ui.helper.attr('data-group');
 
@@ -271,7 +271,7 @@ function load(){
 				    newHelp.children('.element__del').attr('data-id', thisId);
 
 
-					// Element delete button - adding interactivity
+					// Element delete button - adding interactivity #
 					$('span.element__del[data-id="'+ thisId +'"]' ).click( function(e) {
 
 
@@ -339,3 +339,4 @@ $(document).ready(function(){
     .ajaxStop(function() {
         $( '#loading' ).hide();
     });
+ 
