@@ -384,7 +384,7 @@
 			"file": "/C/Users/Slava/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 			"settings":
 			{
-				"buffer_size": 290,
+				"buffer_size": 291,
 				"line_ending": "Unix"
 			}
 		},
@@ -599,6 +599,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"delay",
+			"timeout",
 			"$formBody",
 			"255",
 			"col",
@@ -724,9 +726,7 @@
 			"logo--threecol",
 			"column--fancy",
 			"column",
-			"column--fancy",
-			"p",
-			"padding"
+			"column--fancy"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -884,7 +884,7 @@
 					"file": "/C/Users/Slava/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 					"settings":
 					{
-						"buffer_size": 290,
+						"buffer_size": 291,
 						"regions":
 						{
 						},
@@ -1138,8 +1138,8 @@
 						"selection":
 						[
 							[
-								1202,
-								1217
+								7783,
+								7819
 							]
 						],
 						"settings":
@@ -1241,7 +1241,7 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 638.0,
+						"translation.y": 1273.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

@@ -72,7 +72,7 @@ function renderEditorForm (idValue) {
 		for(var key in property) {
 		return $('<div class="input"><span class="label">'+ key +'</span><input type="text" name="'+ key +'" value="'+ property[key] +'"></div>')
 		}
-	};
+	}
 	var properties = getDeviceProps(findDeviceID(idValue));
 
 	$('form[name="properties"]').remove();
