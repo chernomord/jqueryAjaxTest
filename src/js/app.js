@@ -27,7 +27,7 @@ function getDevices(config){
 
 // find object id in $devices array by propery ID value
 function findDeviceID (idValue) {
-	for (i=0; i < $devices.length; i++) {
+	for (var i=0; i < $devices.length; i++) {
 		if ($devices[i].id == idValue) { return i; }
 	}
 }
@@ -119,13 +119,13 @@ function SortIdsByTypes(dataArray) {
 
 	var uniqueTypes = uniq(types);
 
-	IdsCollection = {};
+	var IdsCollection = {};
 
-	for ( t=0; t < uniqueTypes.length; t++ ) {
+	for (var t=0; t < uniqueTypes.length; t++ ) {
 
 		IdsCollection[uniqueTypes[t]] = [];
 
-		for ( i=0; i < typesIds.length; i++) {
+		for (var i=0; i < typesIds.length; i++) {
 			if ( typesIds[i][0] == uniqueTypes[t] ) {
 				IdsCollection[uniqueTypes[t]].push(typesIds[i][1]);
 			};
@@ -161,9 +161,8 @@ function renderElements(dataArray, IdsCollection) {
 	    $('[data-group="' + grName +'"]' )
 	    .draggable({ 
 	    	opacity : 0.7,
-	    	zIndex: function(event,ui){ 
-	    		var newzindex = $(this).zIndex() +10; 
-	    		return newzindex  
+	    	zIndex: function(event,ui){
+	    		return $(this).zIndex() +10;
 	    	},
 	    	helper : "clone",
 	    	stack: "div.ui-draggable",
@@ -192,8 +191,10 @@ function renderElements(dataArray, IdsCollection) {
 	    			.css("display", "none")
 	    			.parent()
 	    			.addClass('element--inst')
-	    			.append('<span class="element__del">x</span>');	
-	    		} else { return false };
+	    			.append('<span class="element__del">x</span>');
+	    		} else {
+					return false
+				}
 			},
     	    stop: function(event, ui) {
 		    	var thisGrName = ui.helper.attr('data-group');
@@ -282,8 +283,7 @@ function load(){
 		    				ancestorGroup = $('.element--group[data-group="'+ thisGrName +'"]'),
 		    				ancCounter = ancestorGroup.children('.element__counter');
 						// delete editor form if this object is active
-						if ($('form[name="properties"]').attr('data-id') == thisId) {
-							$('form[name="properties"]').remove();}
+						if ($('form[name="properties"]').attr('data-id') == thisId) $('form[name="properties"]').remove();
 						// push element back to croup id's collection
 		    			$IdsCollection[thisGrName].push(thisId);
 						
