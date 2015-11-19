@@ -90,12 +90,10 @@ function renderEditorForm (idValue) {
 		        })
 	        );
 	    }
-	};
+	}
 	// actually render form
 	$('.editor').append($formBody);
-};
- 
-
+}
 // data mining module for unpredictable number of types of objects
 // getting array = [type_Name,[type_Ids]]
 // 
@@ -108,7 +106,7 @@ function SortIdsByTypes(dataArray) {
 	    return a.filter(function(item) {
 	        return seen.hasOwnProperty(item) ? false : (seen[item] = true);
 	    });
-	};
+	}
 	var types = dataArray.map(function(n, idx) {
 			return n.type;
 		});
@@ -128,15 +126,12 @@ function SortIdsByTypes(dataArray) {
 		for (var i=0; i < typesIds.length; i++) {
 			if ( typesIds[i][0] == uniqueTypes[t] ) {
 				IdsCollection[uniqueTypes[t]].push(typesIds[i][1]);
-			};
-		};
-	}; 
-
-
+			}
+		}
+	}
 	return IdsCollection;
-};
-
-// 
+}
+//
 
 
 // Populating devices palette
@@ -146,7 +141,9 @@ function renderElements(dataArray, IdsCollection) {
 	for (var grName in IdsCollection) {if (IdsCollection.hasOwnProperty(grName)) {
 
 		var conf = function (item, idx) {
-			 if ( item.type == grName ) { return true };
+			if (item.type == grName) {
+				return true
+			}
 		};
 
 		var filtered = dataArray.filter(conf);
@@ -177,8 +174,8 @@ function renderElements(dataArray, IdsCollection) {
 	    		if ( $IdsCollection[thisGrName].length > 0 ) {
 	    			if ( $IdsCollection[thisGrName].length == 1 ) {
 	    				$(this).addClass('disabled');
-	    			};
-	    			var newId = $IdsCollection[thisGrName].pop();
+					}
+					var newId = $IdsCollection[thisGrName].pop();
 	    			var newCounter = $IdsCollection[thisGrName].length;
 
 
@@ -207,15 +204,15 @@ function renderElements(dataArray, IdsCollection) {
 		    		var Idback = ui.helper.attr('data-id');
 		    		$IdsCollection[thisGrName].push(Idback);
 		    		$(this).children('.element__counter').text($IdsCollection[thisGrName].length);
-		    		return 
+
 		    	   } 
-		    	else { $dropped = false;  return }
+		    	else { $dropped = false;   }
 		    }
 
 	    });
-	}};
-};
-
+	}
+	}
+}
 // Main module
 // Retrieving data and Application loading
 
@@ -304,10 +301,11 @@ function load(){
 						    });        
 
 					});
-					
-				} else {return false};
-				
-	    	}
+
+} else {
+					return false
+				}
+			}
 	    });
 
 		
@@ -320,11 +318,7 @@ function load(){
 
     $.when()
      .done(console.log( "populating : done")); // debug
-};
-
-
-
-
+}
 // app init
 $(document).ready(function(){
 

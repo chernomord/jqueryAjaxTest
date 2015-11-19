@@ -1,7 +1,7 @@
 var devicesConf = {
 	url: "devices.json", type: "GET", dataType : "json",
     success: function( json ) {
-    	// debug
+		// debug
         return json;
     },
     error: function( xhr, status, errorThrown ) {
@@ -20,21 +20,21 @@ function getDevices(config){
     .done(function(devices) {
         d.resolve(devices);
     })
-    .fail(d.reject); 
+    .fail(d.reject);
     return d.promise();
-};
+}
 
 
 // find object id in $devices array by propery ID value
 function findDeviceID (idValue) {
-	for (i=0; i < $devices.length; i++) {
-		if ($devices[i].id == idValue) { return i } 
+	for (var i=0; i < $devices.length; i++) {
+		if ($devices[i].id == idValue) { return i; }
 	}
 }
 
 // get 'properties' object from $devices by given its array ID
 function getDeviceProps (arrayId) {
-	return $devices[arrayId].properties
+	return $devices[arrayId].properties;
 }
 
 // replace $devices object 'properties' by its ID with new object 
@@ -72,7 +72,7 @@ function renderEditorForm (idValue) {
 		for(var key in property) {
 		return $('<div class="input"><span class="label">'+ key +'</span><input type="text" name="'+ key +'" value="'+ property[key] +'"></div>')
 		}
-	};
+	}
 	var properties = getDeviceProps(findDeviceID(idValue));
 
 	$('form[name="properties"]').remove();
@@ -90,12 +90,10 @@ function renderEditorForm (idValue) {
 		        })
 	        );
 	    }
-	};
+	}
 	// actually render form
 	$('.editor').append($formBody);
-};
- 
-
+}
 // data mining module for unpredictable number of types of objects
 // getting array = [type_Name,[type_Ids]]
 // 
@@ -108,7 +106,7 @@ function SortIdsByTypes(dataArray) {
 	    return a.filter(function(item) {
 	        return seen.hasOwnProperty(item) ? false : (seen[item] = true);
 	    });
-	};
+	}
 	var types = dataArray.map(function(n, idx) {
 			return n.type;
 		});
@@ -119,24 +117,21 @@ function SortIdsByTypes(dataArray) {
 
 	var uniqueTypes = uniq(types);
 
-	IdsCollection = {};
+	var IdsCollection = {};
 
-	for ( t=0; t < uniqueTypes.length; t++ ) {
+	for (var t=0; t < uniqueTypes.length; t++ ) {
 
 		IdsCollection[uniqueTypes[t]] = [];
 
-		for ( i=0; i < typesIds.length; i++) {
+		for (var i=0; i < typesIds.length; i++) {
 			if ( typesIds[i][0] == uniqueTypes[t] ) {
 				IdsCollection[uniqueTypes[t]].push(typesIds[i][1]);
-			};
-		};
-	}; 
-
-
+			}
+		}
+	}
 	return IdsCollection;
-};
-
-// 
+}
+//
 
 
 // Populating devices palette
@@ -146,7 +141,9 @@ function renderElements(dataArray, IdsCollection) {
 	for (var grName in IdsCollection) {if (IdsCollection.hasOwnProperty(grName)) {
 
 		var conf = function (item, idx) {
-			 if ( item.type == grName ) { return true };
+			if (item.type == grName) {
+				return true
+			}
 		};
 
 		var filtered = dataArray.filter(conf);
@@ -161,9 +158,8 @@ function renderElements(dataArray, IdsCollection) {
 	    $('[data-group="' + grName +'"]' )
 	    .draggable({ 
 	    	opacity : 0.7,
-	    	zIndex: function(event,ui){ 
-	    		var newzindex = $(this).zIndex() +10; 
-	    		return newzindex  
+	    	zIndex: function(event,ui){
+	    		return $(this).zIndex() +10;
 	    	},
 	    	helper : "clone",
 	    	stack: "div.ui-draggable",
@@ -178,8 +174,8 @@ function renderElements(dataArray, IdsCollection) {
 	    		if ( $IdsCollection[thisGrName].length > 0 ) {
 	    			if ( $IdsCollection[thisGrName].length == 1 ) {
 	    				$(this).addClass('disabled');
-	    			};
-	    			var newId = $IdsCollection[thisGrName].pop();
+					}
+					var newId = $IdsCollection[thisGrName].pop();
 	    			var newCounter = $IdsCollection[thisGrName].length;
 
 
@@ -192,9 +188,11 @@ function renderElements(dataArray, IdsCollection) {
 	    			.css("display", "none")
 	    			.parent()
 	    			.addClass('element--inst')
-	    			.append('<span class="element__del">x</span>');	
-	    		} else { return false };
-	    	},
+	    			.append('<span class="element__del">x</span>');
+	    		} else {
+					return false
+				}
+			},
     	    stop: function(event, ui) {
 		    	var thisGrName = ui.helper.attr('data-group');
 
@@ -206,15 +204,15 @@ function renderElements(dataArray, IdsCollection) {
 		    		var Idback = ui.helper.attr('data-id');
 		    		$IdsCollection[thisGrName].push(Idback);
 		    		$(this).children('.element__counter').text($IdsCollection[thisGrName].length);
-		    		return 
+
 		    	   } 
-		    	else { $dropped = false;  return }
+		    	else { $dropped = false;   }
 		    }
 
 	    });
-	}};
-};
-
+	}
+	}
+}
 // Main module
 // Retrieving data and Application loading
 
@@ -271,7 +269,7 @@ function load(){
 				    newHelp.children('.element__del').attr('data-id', thisId);
 
 
-					// Element delete button - adding interactivity
+					// Element delete button - adding interactivity #
 					$('span.element__del[data-id="'+ thisId +'"]' ).click( function(e) {
 
 
@@ -282,8 +280,7 @@ function load(){
 		    				ancestorGroup = $('.element--group[data-group="'+ thisGrName +'"]'),
 		    				ancCounter = ancestorGroup.children('.element__counter');
 						// delete editor form if this object is active
-						if ($('form[name="properties"]').attr('data-id') == thisId) {
-							$('form[name="properties"]').remove();}
+						if ($('form[name="properties"]').attr('data-id') == thisId) $('form[name="properties"]').remove();
 						// push element back to croup id's collection
 		    			$IdsCollection[thisGrName].push(thisId);
 						
@@ -304,10 +301,11 @@ function load(){
 						    });        
 
 					});
-					
-				} else {return false};
-				
-	    	}
+
+} else {
+					return false
+				}
+			}
 	    });
 
 		
@@ -320,11 +318,7 @@ function load(){
 
     $.when()
      .done(console.log( "populating : done")); // debug
-};
-
-
-
-
+}
 // app init
 $(document).ready(function(){
 
@@ -339,3 +333,4 @@ $(document).ready(function(){
     .ajaxStop(function() {
         $( '#loading' ).hide();
     });
+ 
